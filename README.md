@@ -47,7 +47,29 @@ Url: https://api.ninjalink.com/v2/sales/list
 ##Links
 
 ### Link
+This method will convert a regular store link to affiliate link.
+
+Calling this method will count as a click on the link, do not use this is combination with the redirect method. 
+
 Url: https://api.ninjalink.com/v2/links/link
+
+HTTP Method: Get
+
+Parameters:
+
+String Url (url must be encoded)
+
+String Api 
+
+Example:
+
+'''php
+$affiliate_link = file_get_contents('https://api.ninjalink.com/v2/links/link?Api=ffffffffffffffffffffff&Url='. url_encode('http://someurl.com'));
+
+//Your logging and logic here.
+
+header('location:' . $affiliate_link);
+''
 
 ### Redirect
 Url: https://api.ninjalink.com/v2/links/redirect
