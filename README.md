@@ -63,13 +63,13 @@ String Api
 
 Example:
 
-'''php
+```php
 $affiliate_link = file_get_contents('https://api.ninjalink.com/v2/links/link?Api=ffffffffffffffffffffff&Url='. url_encode('http://someurl.com'));
 
 //Your logging and logic here.
 
 header('location:' . $affiliate_link);
-''
+```
 
 ### Redirect
 Url: https://api.ninjalink.com/v2/links/redirect
