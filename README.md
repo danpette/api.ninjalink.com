@@ -19,8 +19,14 @@ String Email
 
 
 ###Unauthorize
+This method will unvalidate the authorization token, use this when done using the api.
+
 Url: https://api.ninjalink.com/v2/auth/unauthorize
+
 HTTP Method: Get
+
+Requires a valid authorization token in header field: AuthorizationToken
+
 
 ## Account
 
