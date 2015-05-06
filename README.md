@@ -7,26 +7,20 @@ Endpoint: https://api.ninjalink.com/v2/
 ###Authorize
 This method will create a authorization token valid for 15 minutes, authorization token are required for for api calls.
 
-Url: https://api.ninjalink.com/v2/auth/authorize
-
-Accepted HTTP Methods: GET
+GET/ https://api.ninjalink.com/v2/auth/authorize
 
 Parameters:
 
-String Api
-
-String Email
+* String Api, your personal api key.
+* String Email, the email associated with the api key.
 
 
 ###Unauthorize
 This method will unvalidate the authorization token, use this when done using the api.
 
-Url: https://api.ninjalink.com/v2/auth/unauthorize
-
-HTTP Method: Get
+GET/ https://api.ninjalink.com/v2/auth/unauthorize
 
 Requires a valid authorization token in header field: AuthorizationToken
-
 
 ## Account
 
@@ -55,9 +49,8 @@ GET/ https://api.ninjalink.com/v2/links/link
 
 Parameters:
 
-String Url (url must be encoded)
-
-String Api 
+* String Url, url must be encoded
+* String Api, your personal api key.
 
 Example:
 
@@ -69,17 +62,20 @@ $affiliate_link = file_get_contents('https://api.ninjalink.com/v2/links/link?Api
 header('location:' . $affiliate_link);
 ```
 
-### Redirect
-Url: https://api.ninjalink.com/v2/links/redirect
-
 ## Website
 
 ### Validate website implementation
+
+This method will validate if you combination of token and website id is correct.
+
 Url: https://api.ninjalink.com/v2/website/validate
 
 ## Stores
 
 ### List all stores
+
+This method lists all stores and their url's. stores can be filtered by markets (se markets api for valid options)
+
 Url: https://api.ninjalink.com/v2/stores/list
 
 ## Market
