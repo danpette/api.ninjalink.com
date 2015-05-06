@@ -1,5 +1,6 @@
 #API 
 Current version: 2
+
 Endpoint: https://api.ninjalink.com/v2/
 
 ## Authenticate
@@ -13,7 +14,6 @@ Parameters:
 
 * String Api, your personal api key.
 * String Email, the email associated with the api key.
-
 
 ###Unauthorize
 This method will unvalidate the authorization token, use this when done using the api.
@@ -71,7 +71,9 @@ GET/ https://api.ninjalink.com/v2/website/validate
 
 This method lists all stores and their url's. stores can be filtered by markets (se markets api for valid options)
 
-GET/ https://api.ninjalink.com/v2/stores/list
+POST/ https://api.ninjalink.com/v2/stores/list
+
+Requires a valid authorization token in header field: AuthorizationToken
 
 ## Market
 
@@ -84,7 +86,17 @@ GET/  https://api.ninjalink.com/v2/markets/list
 
 Lists statistics for clicks, sale and commission for either today, yesterday, this month, last month, this year.
 
-GET/ https://api.ninjalink.com/v2/repport/overview
+POST/ https://api.ninjalink.com/v2/repport/overview
+
+**Requires a valid authorization token in header field: AuthorizationToken**
+
+### Sales
+
+Returns a list of your sales.
+
+POST/ https://api.ninjalink.com/v2/repport/sales
+
+**Requires a valid authorization token in header field: AuthorizationToken**
 
 ## Product
 
