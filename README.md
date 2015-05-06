@@ -51,9 +51,7 @@ This method will convert a regular store link to affiliate link.
 
 Calling this method will count as a click on the link, do not use this is combination with the redirect method. 
 
-Url: https://api.ninjalink.com/v2/links/link
-
-HTTP Method: Get
+GET/ https://api.ninjalink.com/v2/links/link
 
 Parameters:
 
