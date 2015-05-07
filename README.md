@@ -25,13 +25,27 @@ Requires a valid authorization token in header field: AuthorizationToken
 ## Account
 
 ### Info
+
+Account inforamtion, not all account data is available.
+
 GET/ https://api.ninjalink.com/v2/account/info
 
 ### Websites
+
+List all your websites and their status
+
 GET/ https://api.ninjalink.com/v2/account/websites
 
 ### Payments
+
+List a summary of all payments.
+
 GET/ https://api.ninjalink.com/v2/account/payments
+
+Example response:
+```php
+{"code":200,"data":[{"ID":1,"Date":"31.012.2015","Commission": "423.21", "Currency": "NOK", "Status": "Payed", "Account": "1234.56.78901"}]}
+```
 
 ##Links
 
