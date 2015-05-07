@@ -78,7 +78,16 @@ Requires a valid authorization token in header field: AuthorizationToken
 ## Market
 
 ### List all markets
+
+Returns a list off all available markets
+
 GET/  https://api.ninjalink.com/v2/markets/list
+
+Example response:
+
+```php
+{"code":200,"data":[{"ID":1,"Name":"Norway"},{"ID":2,"Name":"Sweden"}]}
+```
 
 ## Reports
 
