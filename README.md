@@ -65,8 +65,8 @@ Response type
 * JSON String
 
 Fields
-* code, 200 if success, else se error codes.
-* data, monitized url
+* integer code, 200 if success, else se error codes.
+* string data, monitized url
  
 Error codes:
 
