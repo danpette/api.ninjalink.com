@@ -54,17 +54,25 @@ This method will convert a regular store link to affiliate link.
 
 Calling this method will count as a click on the link, do not use this is combination with the redirect method. 
 
-GET/ https://api.ninjalink.com/v2/links/link
+GET/ https://api.ninjalink.com/v2/link/click
 
 Parameters:
 
 * String Url, url must be encoded
 * String Api, your personal api key.
+ 
+Error codes:
+
+* 501 - invalid request type, only get methods allowed
+* 502 - invalid api key
+* 503 - no merchant found for given url
+* 504 - failed to fetch tracking url for existing link
+* 505 - failed to fetch tracking url for new link
 
 Example:
 
 ```php
-$affiliate_link = file_get_contents('https://api.ninjalink.com/v2/links/link?Api=ffffffffffffffffffffff&Url='. url_encode('http://someurl.com'));
+$affiliate_link = file_get_contents('https://api.ninjalink.com/v2/link/click?url=AAAAAAAAAAAAAAAAAAAAA&Url='. url_encode('http://someurl.com'));
 
 //Your logging and logic here.
 
