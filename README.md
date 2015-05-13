@@ -12,8 +12,8 @@ GET/ https://api.ninjalink.com/v2/auth/authorize
 
 Parameters:
 
-* String Api, your personal api key.
-* String Email, the email associated with the api key.
+* String api, your personal api key.
+* String email, the email associated with the api key.
 
 ###Unauthorize
 This method will unvalidate the authorization token, use this when done using the api.
@@ -63,7 +63,7 @@ Parameters:
  
 Error codes:
 
-* 501 - invalid request type, only get methods allowed
+* 501 - invalid request type, only http GET/ method allowed
 * 502 - invalid api key
 * 503 - no merchant found for given url
 * 504 - failed to fetch tracking url for existing link
