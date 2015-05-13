@@ -11,9 +11,22 @@ This method will create a authorization token valid for 15 minutes, authorizatio
 GET/ https://api.ninjalink.com/v2/auth/authorize
 
 Parameters:
-
 * String api, your personal api key.
 * String email, the email associated with the api key.
+
+Response type
+* JSON String
+
+Respons fields
+* integer code, 200 if success, else se error codes.
+* string data, the token needed for api calls.
+
+Response codes:
+* 200 - OK, se data field for token.
+* 400 - Bad request, missing get values "api" and/or "email".
+* 405 - Method not allowed, this method only accepts GET requests.
+* 500 - Internal Server Error.
+* 504 - Unauthorized, invalid combination of email and api key.
 
 ###Unauthorize
 This method will unvalidate the authorization token, use this when done using the api.
@@ -64,17 +77,16 @@ Parameters:
 Response type
 * JSON String
 
-Fields
+Response fields
 * integer code, 200 if success, else se error codes.
 * string data, monitized url
  
-Error codes:
-
-* 501 - invalid request type, only http GET/ method allowed
-* 502 - invalid api key
-* 503 - no merchant found for given url
-* 504 - failed to fetch tracking url for existing link
-* 505 - failed to fetch tracking url for new link
+Response codes:
+* 200 - OK (se data field for url)
+* 204 - No content, Link not modified, no such merchant (se data field for url)
+* 400 - Bad request, missing get values "api" or invalid key
+* 405 - Method not allowed, this method only accepts POST requests.
+* 500 - Internal server error
 
 Example:
 
@@ -155,3 +167,14 @@ GET/ https://api.ninjalink.com/v2/products/fetch/
 List all categories for a market.
 
 GET/ https://api.ninjalink.com/v2/products/categories
+
+# 2xx Http codes
+* 200 - OK
+
+# 4xx Http codes
+* 405 - Method not allowed
+* 400 - Bad request
+ 
+# 5xx Http codes
+* 500 - Interal server error
+* 504 - Unauthorized
