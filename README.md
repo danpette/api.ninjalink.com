@@ -81,9 +81,9 @@ Example:
 ```php
 $affiliate_link = file_get_contents('https://api.ninjalink.com/v2/link/click?url=AAAAAAAAAAAAAAAAAAAAA&Url='. url_encode('http://someurl.com'));
 
-//Your logging and logic here.
+$data = json_decode(affiliate_link);
 
-header('location:' . $affiliate_link);
+header('location:' . $data->data);
 ```
 
 ## Website
