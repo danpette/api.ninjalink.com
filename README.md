@@ -58,8 +58,8 @@ GET/ https://api.ninjalink.com/v2/link/click
 
 Parameters:
 
-* String Url, url must be encoded
-* String Api, your personal api key.
+* String url, url must be encoded
+* String key, your personal api key.
  
 Error codes:
 
