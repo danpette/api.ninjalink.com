@@ -17,10 +17,6 @@ Parameters:
 Response type
 * JSON String
 
-Respons fields
-* integer code, 200 if success, else se error codes.
-* string data, the token needed for api calls.
-
 Response codes:
 * 200 - OK, se data field for token.
 * 400 - Bad request, missing get values "api" and/or "email".
