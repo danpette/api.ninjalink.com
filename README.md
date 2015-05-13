@@ -61,11 +61,10 @@ Parameters:
 * String url, url must be encoded
 * String key, your personal api key.
 
-Response
+Response type
+* JSON String
 
-Type: JSON String
-
-fields
+Fields
 * code, 200 if success, else se error codes.
 * data, monitized url
  
