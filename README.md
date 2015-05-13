@@ -6,7 +6,7 @@ Endpoint: https://api.ninjalink.com/v2/
 ## Authenticate
 
 ###Authorize
-This method will create a authorization token valid for 15 minutes, authorization token are required for for api calls.
+This method will create a authorization token valid for 15 minutes, authorization token are required for for api calls. The token is bound to the ip that performed the authroize request.
 
 GET/ https://api.ninjalink.com/v2/auth/authorize
 
