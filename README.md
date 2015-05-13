@@ -87,7 +87,7 @@ Response codes:
 Example:
 
 ```php
-$affiliate_link = file_get_contents('https://api.ninjalink.com/v2/link/click?url=AAAAAAAAAAAAAAAAAAAAA&Url='. url_encode('http://someurl.com'));
+$affiliate_link = file_get_contents('https://api.ninjalink.com/v2/link/click?key=AAAAAAAAAAAAAAAAAAAAA&Url='. url_encode('http://someurl.com'));
 
 $data = json_decode(affiliate_link);
 
