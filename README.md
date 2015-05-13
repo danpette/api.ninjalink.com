@@ -47,9 +47,9 @@ Example response:
 {"code":200,"data":[{"ID":1,"Date":"31.012.2015","Commission": "423.21", "Currency": "NOK", "Status": "Payed", "Account": "1234.56.78901"}]}
 ```
 
-##Links
+##Link
 
-### Link
+### Click
 This method will convert a regular store link to affiliate link.
 
 Calling this method will count as a click on the link, do not use this is combination with the redirect method. 
