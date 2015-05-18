@@ -89,7 +89,7 @@ Example:
 ```php
 $affiliate_link = file_get_contents('https://api.ninjalink.com/v2/link/click?key=AAAAAAAAAAAAAAAAAAAAA&Url='. url_encode('http://someurl.com'));
 
-$data = json_decode(affiliate_link);
+$data = json_decode($affiliate_link);
 
 header('location:' . $data->data);
 ```
@@ -108,7 +108,7 @@ GET/ https://api.ninjalink.com/v2/website/validate
 
 This method lists all stores and their url's. stores can be filtered by markets (se markets api for valid options)
 
-POST/ https://api.ninjalink.com/v2/stores/list
+GET/ https://api.ninjalink.com/v2/stores/list
 
 Requires a valid authorization token in header field: AuthorizationToken
 
