@@ -132,7 +132,7 @@ Example response:
 
 Lists statistics for clicks, sale and commission for either today, yesterday, this month, last month, this year.
 
-POST/ https://api.ninjalink.com/v2/repport/overview
+POST/ https://api.ninjalink.com/v2/report/overview
 
 **Requires a valid authorization token in header field: AuthorizationToken**
 
@@ -140,7 +140,20 @@ POST/ https://api.ninjalink.com/v2/repport/overview
 
 Returns a list of your sales.
 
-POST/ https://api.ninjalink.com/v2/repport/sales
+GET/ https://api.ninjalink.com/v2/report/sales
+
+Parameters:
+
+* String fromDate, format: dd.mm.yyyy
+* String toDate, format: dd.mm.yyyy.
+
+Response type
+* JSON String
+
+Response fields
+* integer code, 200 if success, else se error codes.
+* list data, list contains the following field: id, date, status, commission, program
+
 
 **Requires a valid authorization token in header field: AuthorizationToken**
 
