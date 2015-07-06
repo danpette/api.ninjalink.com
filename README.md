@@ -69,6 +69,7 @@ Parameters:
 
 * String url, url must be encoded
 * String key, your personal api key.
+* String epi, to identify where the sale originated. Min 6 letters/numbers, max 30. **OPTIONAL FIELD**
 
 Response type
 * JSON String
