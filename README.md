@@ -144,26 +144,6 @@ Response fields
 
 **Requires a valid authorization token in header field: AuthorizationToken**
 
-## Product
-
-### Search
-
-Search for a product by name, category or store.
-
-GET/ https://api.ninjalink.com/v2/products/search
-
-### Fetch
-
-Fetch a product set by filters, like search all results from this method are paged and max 100 products can be retrived per request. Abuse of this method will get your API access suspended.
-
-GET/ https://api.ninjalink.com/v2/products/fetch/
-
-### Categories
-
-List all categories for a market.
-
-GET/ https://api.ninjalink.com/v2/products/categories
-
 # 2xx Http codes
 * 200 - OK
 
